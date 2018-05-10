@@ -3,11 +3,21 @@ package com.nebulasio.client;
 import com.nebulasio.client.admin.request.*;
 import com.nebulasio.client.admin.response.*;
 import com.nebulasio.client.api.response.Response;
+import com.nebulasio.client.impl.HttpNebulasClient;
+import okhttp3.OkHttpClient;
 
 /**
  * Create by liuyang89 on 2018/05/10
  **/
 public interface NebulasAdminClient {
+
+    static NebulasClient create(String host) {
+        return new HttpNebulasClient(host);
+    }
+
+    static NebulasClient create(String host, OkHttpClient okHttpClient) {
+        return new HttpNebulasClient(host, okHttpClient);
+    }
 
     Response<NodeInfo> nodeInfo();
 
