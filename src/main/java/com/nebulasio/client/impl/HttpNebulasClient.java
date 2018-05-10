@@ -92,9 +92,4 @@ public class HttpNebulasClient implements NebulasClient {
         return client.post(host + "/v1/user/dynasty" , new TypeToken<Response<GetMinerResult>>(){});
     }
 
-    public static void main(String[] args) {
-        NebulasClient client = NebulasClient.create("http://123.207.167.250:8685");
-        System.out.println(client.getEventsByHash(new GetEventByHashRequest("972c3c04077557ed386dd174d151d332b1dcd161ab4153814ece8e691479e40a")));
-    }
-
 }
