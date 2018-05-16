@@ -14,6 +14,10 @@ public class GetAccountStateRequest implements Serializable {
     public GetAccountStateRequest() {
     }
 
+    public GetAccountStateRequest(String address) {
+        this.address = address;
+    }
+
     public GetAccountStateRequest(String address, Long height) {
         this.address = address;
         this.height = height;

@@ -1,7 +1,6 @@
 package com.nebulasio.client.api.response;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 
 /**
  * Create by liuyang89 on 2018/05/05
@@ -16,7 +15,7 @@ public class TransactionReceipt implements Serializable {
 
     private String to;
 
-    private BigDecimal value;
+    private String value;
 
     private Long nonce;
 
@@ -26,15 +25,15 @@ public class TransactionReceipt implements Serializable {
 
     private String data;
 
-    private BigDecimal gasPrice;
+    private String gasPrice;
 
-    private BigDecimal gasLimit;
+    private String gasLimit;
 
     private String contractAddress;
 
     private int status;
 
-    private BigDecimal gasUsed;
+    private String gasUsed;
 
     public Long getTimestamp() {
         return timestamp;
@@ -81,11 +80,11 @@ public class TransactionReceipt implements Serializable {
         return this;
     }
 
-    public BigDecimal getValue() {
+    public String getValue() {
         return value;
     }
 
-    public TransactionReceipt setValue(BigDecimal value) {
+    public TransactionReceipt setValue(String value) {
         this.value = value;
         return this;
     }
@@ -117,20 +116,20 @@ public class TransactionReceipt implements Serializable {
         return this;
     }
 
-    public BigDecimal getGasPrice() {
+    public String getGasPrice() {
         return gasPrice;
     }
 
-    public TransactionReceipt setGasPrice(BigDecimal gasPrice) {
+    public TransactionReceipt setGasPrice(String gasPrice) {
         this.gasPrice = gasPrice;
         return this;
     }
 
-    public BigDecimal getGasLimit() {
+    public String getGasLimit() {
         return gasLimit;
     }
 
-    public TransactionReceipt setGasLimit(BigDecimal gasLimit) {
+    public TransactionReceipt setGasLimit(String gasLimit) {
         this.gasLimit = gasLimit;
         return this;
     }
@@ -153,11 +152,11 @@ public class TransactionReceipt implements Serializable {
         return this;
     }
 
-    public BigDecimal getGasUsed() {
+    public String getGasUsed() {
         return gasUsed;
     }
 
-    public TransactionReceipt setGasUsed(BigDecimal gasUsed) {
+    public TransactionReceipt setGasUsed(String gasUsed) {
         this.gasUsed = gasUsed;
         return this;
     }

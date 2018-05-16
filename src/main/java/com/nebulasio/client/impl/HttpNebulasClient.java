@@ -44,32 +44,32 @@ public class HttpNebulasClient implements NebulasClient {
 
     @Override
     public Response<CallResult> call(CallRequest request) {
-        return client.post(host + "/v1/user/call", new TypeToken<Response<CallResult>>(){});
+        return client.post(host + "/v1/user/call", request , new TypeToken<Response<CallResult>>(){});
     }
 
     @Override
     public Response<RawTransaction> sendRawTransaction(SendRawTransactionRequest request) {
-        return client.post(host + "/v1/user/rawtransaction", new TypeToken<Response<RawTransaction>>(){});
+        return client.post(host + "/v1/user/rawtransaction",request ,  new TypeToken<Response<RawTransaction>>(){});
     }
 
     @Override
     public Response<Block> getBlockByHash(GetBlockByHashRequest request) {
-        return client.post(host + "/v1/user/getBlockByHash", new TypeToken<Response<Block>>(){});
+        return client.post(host + "/v1/user/getBlockByHash", request , new TypeToken<Response<Block>>(){});
     }
 
     @Override
     public Response<Block> getBlockByHeight(GetBlockByHeightRequest request) {
-        return client.post(host + "/v1/user/getBlockByHeight", new TypeToken<Response<Block>>(){});
+        return client.post(host + "/v1/user/getBlockByHeight", request , new TypeToken<Response<Block>>(){});
     }
 
     @Override
     public Response<TransactionReceipt> getTransactionReceipt(GetTransactionReceiptRequest request) {
-        return client.post(host + "/v1/user/getTransactionReceipt", new TypeToken<Response<TransactionReceipt>>(){});
+        return client.post(host + "/v1/user/getTransactionReceipt", request , new TypeToken<Response<TransactionReceipt>>(){});
     }
 
     @Override
     public Response<Event> subscribe(SubscribeRequest request) {
-        return client.post(host + "/v1/user/subscribe", new TypeToken<Response<Event>>(){});
+        return client.post(host + "/v1/user/subscribe", request , new TypeToken<Response<Event>>(){});
     }
 
     @Override
@@ -79,17 +79,17 @@ public class HttpNebulasClient implements NebulasClient {
 
     @Override
     public Response<EstimateGas> estimateGas(EstimateGasRequest request) {
-        return client.post(host + "/v1/user/estimateGas", new TypeToken<Response<EstimateGas>>(){});
+        return client.post(host + "/v1/user/estimateGas", request , new TypeToken<Response<EstimateGas>>(){});
     }
 
     @Override
     public Response<GetEventsByHashResult> getEventsByHash(GetEventByHashRequest request) {
-        return client.post(host + "/v1/user/getEventsByHash" , new TypeToken<Response<GetEventsByHashResult>>(){});
+        return client.post(host + "/v1/user/getEventsByHash" , request , new TypeToken<Response<GetEventsByHashResult>>(){});
     }
 
     @Override
     public Response<GetMinerResult> getDynasty(GetMinerRequest request) {
-        return client.post(host + "/v1/user/dynasty" , new TypeToken<Response<GetMinerResult>>(){});
+        return client.post(host + "/v1/user/dynasty" , request , new TypeToken<Response<GetMinerResult>>(){});
     }
 
 }

@@ -1,27 +1,26 @@
 package com.nebulasio.client.api.response;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 
 /**
  * Create by liuyang89 on 2018/05/07
  **/
 public class GasPrice implements Serializable {
 
-    private BigDecimal gasPrice;
+    private String gasPrice;
 
     public GasPrice() {
     }
 
-    public GasPrice(BigDecimal gasPrice) {
+    public GasPrice(String gasPrice) {
         this.gasPrice = gasPrice;
     }
 
-    public BigDecimal getGasPrice() {
+    public String getGasPrice() {
         return gasPrice;
     }
 
-    public GasPrice setGasPrice(BigDecimal gasPrice) {
+    public GasPrice setGasPrice(String gasPrice) {
         this.gasPrice = gasPrice;
         return this;
     }

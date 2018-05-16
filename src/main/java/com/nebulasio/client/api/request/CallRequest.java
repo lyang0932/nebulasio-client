@@ -1,7 +1,6 @@
 package com.nebulasio.client.api.request;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 
 /**
  * Create by liuyang89 on 2018/05/05
@@ -12,20 +11,20 @@ public class CallRequest implements Serializable {
 
     private String to;
 
-    private BigDecimal value;
+    private String value;
 
     private Long nonce;
 
-    private BigDecimal gasPrice;
+    private String gasPrice;
 
-    private BigDecimal gasLimit;
+    private String gasLimit;
 
     private Contract contract;
 
     public CallRequest() {
     }
 
-    public CallRequest(String from, String to, BigDecimal value, Long nonce, BigDecimal gasPrice, BigDecimal gasLimit, Contract contract) {
+    public CallRequest(String from, String to, String value, Long nonce, String gasPrice, String gasLimit, Contract contract) {
         this.from = from;
         this.to = to;
         this.value = value;
@@ -53,11 +52,11 @@ public class CallRequest implements Serializable {
         return this;
     }
 
-    public BigDecimal getValue() {
+    public String getValue() {
         return value;
     }
 
-    public CallRequest setValue(BigDecimal value) {
+    public CallRequest setValue(String value) {
         this.value = value;
         return this;
     }
@@ -71,20 +70,20 @@ public class CallRequest implements Serializable {
         return this;
     }
 
-    public BigDecimal getGasPrice() {
+    public String getGasPrice() {
         return gasPrice;
     }
 
-    public CallRequest setGasPrice(BigDecimal gasPrice) {
+    public CallRequest setGasPrice(String gasPrice) {
         this.gasPrice = gasPrice;
         return this;
     }
 
-    public BigDecimal getGasLimit() {
+    public String getGasLimit() {
         return gasLimit;
     }
 
-    public CallRequest setGasLimit(BigDecimal gasLimit) {
+    public CallRequest setGasLimit(String gasLimit) {
         this.gasLimit = gasLimit;
         return this;
     }

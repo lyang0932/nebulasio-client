@@ -1,7 +1,6 @@
 package com.nebulasio.client.api.request;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 import java.util.Arrays;
 
 /**
@@ -13,13 +12,13 @@ public class EstimateGasRequest implements Serializable {
 
     private String to;
 
-    private BigDecimal value;
+    private String value;
 
     private Long nonce;
 
-    private BigDecimal gasPrice;
+    private String gasPrice;
 
-    private BigDecimal gasLimit;
+    private String gasLimit;
 
     private String contract;
 
@@ -28,7 +27,7 @@ public class EstimateGasRequest implements Serializable {
     public EstimateGasRequest() {
     }
 
-    public EstimateGasRequest(String from, String to, BigDecimal value, Long nonce, BigDecimal gasPrice, BigDecimal gasLimit) {
+    public EstimateGasRequest(String from, String to, String value, Long nonce, String gasPrice, String gasLimit) {
         this.from = from;
         this.to = to;
         this.value = value;
@@ -37,7 +36,7 @@ public class EstimateGasRequest implements Serializable {
         this.gasLimit = gasLimit;
     }
 
-    public EstimateGasRequest(String from, String to, BigDecimal value, Long nonce, BigDecimal gasPrice, BigDecimal gasLimit, String contract) {
+    public EstimateGasRequest(String from, String to, String value, Long nonce, String gasPrice, String gasLimit, String contract) {
         this.from = from;
         this.to = to;
         this.value = value;
@@ -65,11 +64,11 @@ public class EstimateGasRequest implements Serializable {
         return this;
     }
 
-    public BigDecimal getValue() {
+    public String getValue() {
         return value;
     }
 
-    public EstimateGasRequest setValue(BigDecimal value) {
+    public EstimateGasRequest setValue(String value) {
         this.value = value;
         return this;
     }
@@ -83,20 +82,20 @@ public class EstimateGasRequest implements Serializable {
         return this;
     }
 
-    public BigDecimal getGasPrice() {
+    public String getGasPrice() {
         return gasPrice;
     }
 
-    public EstimateGasRequest setGasPrice(BigDecimal gasPrice) {
+    public EstimateGasRequest setGasPrice(String gasPrice) {
         this.gasPrice = gasPrice;
         return this;
     }
 
-    public BigDecimal getGasLimit() {
+    public String getGasLimit() {
         return gasLimit;
     }
 
-    public EstimateGasRequest setGasLimit(BigDecimal gasLimit) {
+    public EstimateGasRequest setGasLimit(String gasLimit) {
         this.gasLimit = gasLimit;
         return this;
     }

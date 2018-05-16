@@ -1,33 +1,32 @@
 package com.nebulasio.client.api.response;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 
 /**
  * Create by liuyang89 on 2018/05/05
  **/
 public class CallResult implements Serializable{
 
-    private Integer result;
+    private String result;
 
     private String executeErr;
 
-    private BigDecimal estimateGas;
+    private String estimateGas;
 
     public CallResult() {
     }
 
-    public CallResult(Integer result, String executeErr, BigDecimal estimateGas) {
+    public CallResult(String result, String executeErr, String estimateGas) {
         this.result = result;
         this.executeErr = executeErr;
         this.estimateGas = estimateGas;
     }
 
-    public Integer getResult() {
+    public String getResult() {
         return result;
     }
 
-    public CallResult setResult(Integer result) {
+    public CallResult setResult(String result) {
         this.result = result;
         return this;
     }
@@ -41,11 +40,11 @@ public class CallResult implements Serializable{
         return this;
     }
 
-    public BigDecimal getEstimateGas() {
+    public String getEstimateGas() {
         return estimateGas;
     }
 
-    public CallResult setEstimateGas(BigDecimal estimateGas) {
+    public CallResult setEstimateGas(String estimateGas) {
         this.estimateGas = estimateGas;
         return this;
     }

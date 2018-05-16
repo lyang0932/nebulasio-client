@@ -1,28 +1,25 @@
 package com.nebulasio.client.api.response;
 
 
-import com.nebulasio.client.enums.AddressType;
-
 import java.io.Serializable;
-import java.math.BigDecimal;
 
 /**
  * Create by liuyang89 on 2018/05/05
  **/
 
-public class AccountState implements Serializable{
+public class AccountState implements Serializable {
 
-    private BigDecimal balance;
+    private String balance;
 
     private Long nonce;
 
-    private AddressType type;
+    private Integer type;
 
-    public BigDecimal getBalance() {
+    public String getBalance() {
         return balance;
     }
 
-    public AccountState setBalance(BigDecimal balance) {
+    public AccountState setBalance(String balance) {
         this.balance = balance;
         return this;
     }
@@ -36,11 +33,11 @@ public class AccountState implements Serializable{
         return this;
     }
 
-    public AddressType getType() {
+    public Integer getType() {
         return type;
     }
 
-    public AccountState setType(AddressType type) {
+    public AccountState setType(Integer type) {
         this.type = type;
         return this;
     }

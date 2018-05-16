@@ -4,7 +4,6 @@ import com.nebulasio.client.api.request.Contract;
 import com.nebulasio.client.enums.TransactionType;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 
 /**
  * Create by liuyang89 on 2018/05/10
@@ -15,13 +14,13 @@ public class SignTransactionWithPassphraseRequest implements Serializable {
 
     private String to;
 
-    private BigDecimal value;
+    private String value;
 
     private Long nonce;
 
-    private BigDecimal gasPrice;
+    private String gasPrice;
 
-    private BigDecimal gasLimit;
+    private String gasLimit;
 
     private TransactionType type;
 
@@ -30,7 +29,7 @@ public class SignTransactionWithPassphraseRequest implements Serializable {
     public SignTransactionWithPassphraseRequest() {
     }
 
-    public SignTransactionWithPassphraseRequest(String from, String to, BigDecimal value, Long nonce, BigDecimal gasPrice, BigDecimal gasLimit, TransactionType type) {
+    public SignTransactionWithPassphraseRequest(String from, String to, String value, Long nonce, String gasPrice, String gasLimit, TransactionType type) {
         this.from = from;
         this.to = to;
         this.value = value;
@@ -40,7 +39,7 @@ public class SignTransactionWithPassphraseRequest implements Serializable {
         this.type = type;
     }
 
-    public SignTransactionWithPassphraseRequest(String from, String to, BigDecimal value, Long nonce, BigDecimal gasPrice, BigDecimal gasLimit, TransactionType type, Contract contract) {
+    public SignTransactionWithPassphraseRequest(String from, String to, String value, Long nonce, String gasPrice, String gasLimit, TransactionType type, Contract contract) {
         this.from = from;
         this.to = to;
         this.value = value;
@@ -69,11 +68,11 @@ public class SignTransactionWithPassphraseRequest implements Serializable {
         return this;
     }
 
-    public BigDecimal getValue() {
+    public String getValue() {
         return value;
     }
 
-    public SignTransactionWithPassphraseRequest setValue(BigDecimal value) {
+    public SignTransactionWithPassphraseRequest setValue(String value) {
         this.value = value;
         return this;
     }
@@ -87,20 +86,20 @@ public class SignTransactionWithPassphraseRequest implements Serializable {
         return this;
     }
 
-    public BigDecimal getGasPrice() {
+    public String getGasPrice() {
         return gasPrice;
     }
 
-    public SignTransactionWithPassphraseRequest setGasPrice(BigDecimal gasPrice) {
+    public SignTransactionWithPassphraseRequest setGasPrice(String gasPrice) {
         this.gasPrice = gasPrice;
         return this;
     }
 
-    public BigDecimal getGasLimit() {
+    public String getGasLimit() {
         return gasLimit;
     }
 
-    public SignTransactionWithPassphraseRequest setGasLimit(BigDecimal gasLimit) {
+    public SignTransactionWithPassphraseRequest setGasLimit(String gasLimit) {
         this.gasLimit = gasLimit;
         return this;
     }

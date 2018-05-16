@@ -1,22 +1,21 @@
 package com.nebulasio.client.api.response;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 
 /**
  * Create by liuyang89 on 2018/05/07
  **/
 public class EstimateGas implements Serializable {
 
-    private BigDecimal gas;
+    private String gas;
 
     private String err;
 
-    public BigDecimal getGas() {
+    public String getGas() {
         return gas;
     }
 
-    public EstimateGas setGas(BigDecimal gas) {
+    public EstimateGas setGas(String gas) {
         this.gas = gas;
         return this;
     }
