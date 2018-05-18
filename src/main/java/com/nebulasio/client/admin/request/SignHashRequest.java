@@ -11,12 +11,12 @@ public class SignHashRequest implements Serializable {
 
     private String hash;
 
-    private String alg;
+    private Integer alg;
 
     public SignHashRequest() {
     }
 
-    public SignHashRequest(String address, String hash, String alg) {
+    public SignHashRequest(String address, String hash, Integer alg) {
         this.address = address;
         this.hash = hash;
         this.alg = alg;
@@ -40,11 +40,11 @@ public class SignHashRequest implements Serializable {
         return this;
     }
 
-    public String getAlg() {
+    public Integer getAlg() {
         return alg;
     }
 
-    public SignHashRequest setAlg(String alg) {
+    public SignHashRequest setAlg(Integer alg) {
         this.alg = alg;
         return this;
     }

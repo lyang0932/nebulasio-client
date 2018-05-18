@@ -3,15 +3,15 @@ package com.nebulasio.client.admin.request;
 import java.io.Serializable;
 
 /**
- * Create by liuyang89 on 2018/05/10
+ * Create by liuyang89 on 2018/05/18
  **/
-public class SignTransactionWithPassphraseRequest implements Serializable {
+public class SendTransactionWithPassphraseRequest implements Serializable {
 
     private SendTransactionRequest transaction;
 
     private String passphrase;
 
-    public SignTransactionWithPassphraseRequest(SendTransactionRequest transaction, String passphrase) {
+    public SendTransactionWithPassphraseRequest(SendTransactionRequest transaction, String passphrase) {
         this.transaction = transaction;
         this.passphrase = passphrase;
     }
@@ -20,7 +20,7 @@ public class SignTransactionWithPassphraseRequest implements Serializable {
         return transaction;
     }
 
-    public SignTransactionWithPassphraseRequest setTransaction(SendTransactionRequest transaction) {
+    public SendTransactionWithPassphraseRequest setTransaction(SendTransactionRequest transaction) {
         this.transaction = transaction;
         return this;
     }
@@ -29,14 +29,14 @@ public class SignTransactionWithPassphraseRequest implements Serializable {
         return passphrase;
     }
 
-    public SignTransactionWithPassphraseRequest setPassphrase(String passphrase) {
+    public SendTransactionWithPassphraseRequest setPassphrase(String passphrase) {
         this.passphrase = passphrase;
         return this;
     }
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("SignTransactionWithPassphraseRequest{");
+        final StringBuilder sb = new StringBuilder("SendTransactionWithPassphraseRequest{");
         sb.append("transaction=").append(transaction);
         sb.append(", passphrase='").append(passphrase).append('\'');
         sb.append('}');

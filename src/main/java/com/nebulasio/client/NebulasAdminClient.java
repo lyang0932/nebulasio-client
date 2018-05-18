@@ -3,7 +3,7 @@ package com.nebulasio.client;
 import com.nebulasio.client.admin.request.*;
 import com.nebulasio.client.admin.response.*;
 import com.nebulasio.client.api.response.Response;
-import com.nebulasio.client.impl.HttpNebulasClient;
+import com.nebulasio.client.impl.HttpNebulasAdminClient;
 import okhttp3.OkHttpClient;
 
 /**
@@ -11,12 +11,12 @@ import okhttp3.OkHttpClient;
  **/
 public interface NebulasAdminClient {
 
-    static NebulasClient create(String host) {
-        return new HttpNebulasClient(host);
+    static NebulasAdminClient create(String host) {
+        return new HttpNebulasAdminClient(host);
     }
 
-    static NebulasClient create(String host, OkHttpClient okHttpClient) {
-        return new HttpNebulasClient(host, okHttpClient);
+    static NebulasAdminClient create(String host, OkHttpClient okHttpClient) {
+        return new HttpNebulasAdminClient(host, okHttpClient);
     }
 
     Response<NodeInfo> nodeInfo();
@@ -31,6 +31,8 @@ public interface NebulasAdminClient {
 
     Response<SignTransactionWithPassphraseResult> signTransactionWithPassphrase(SignTransactionWithPassphraseRequest request);
 
+    Response<SendTransactionWithPassphraseResult> sendTransactionWithPassphrase(SendTransactionWithPassphraseRequest request);
+
     Response<SendTransactionResult> sendTransaction(SendTransactionRequest request);
 
     Response<SignHashResult> signHash(SignHashRequest request);
@@ -38,6 +40,5 @@ public interface NebulasAdminClient {
     Response<StartPprofResult> startPprof(StartPprofRequest request);
 
     Response<NebConfig> getConfig();
-
 
 }

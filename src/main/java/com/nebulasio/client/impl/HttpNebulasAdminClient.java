@@ -59,6 +59,11 @@ public class HttpNebulasAdminClient implements NebulasAdminClient {
     }
 
     @Override
+    public Response<SendTransactionWithPassphraseResult> sendTransactionWithPassphrase(SendTransactionWithPassphraseRequest request) {
+        return client.post(host + "/v1/admin/transactionWithPassphrase" , request , new TypeToken<Response<SendTransactionWithPassphraseResult>>(){});
+    }
+
+    @Override
     public Response<SendTransactionResult> sendTransaction(SendTransactionRequest request) {
         return client.post(host + "/v1/user/transaction" , request , new TypeToken<Response<SendTransactionResult>>(){});
     }
