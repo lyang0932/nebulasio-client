@@ -1,7 +1,5 @@
 package com.nebulasio.client;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 import com.nebulasio.client.api.request.*;
 import com.nebulasio.client.api.response.*;
 import org.junit.Test;
