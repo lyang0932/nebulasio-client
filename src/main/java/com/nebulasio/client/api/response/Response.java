@@ -1,10 +1,15 @@
 package com.nebulasio.client.api.response;
 
+import lombok.Data;
+import lombok.ToString;
+
 import java.io.Serializable;
 
 /**
  * Create by liuyang89 on 2018/05/05
  **/
+@Data
+@ToString
 public class Response<T> implements Serializable {
 
     private String error;
@@ -17,32 +22,5 @@ public class Response<T> implements Serializable {
     public Response(String error, T result) {
         this.error = error;
         this.result = result;
-    }
-
-    public String getError() {
-        return error;
-    }
-
-    public Response<T> setError(String error) {
-        this.error = error;
-        return this;
-    }
-
-    public T getResult() {
-        return result;
-    }
-
-    public Response<T> setResult(T result) {
-        this.result = result;
-        return this;
-    }
-
-    @Override
-    public String toString() {
-        final StringBuilder sb = new StringBuilder("Response{");
-        sb.append("error='").append(error).append('\'');
-        sb.append(", result=").append(result);
-        sb.append('}');
-        return sb.toString();
     }
 }

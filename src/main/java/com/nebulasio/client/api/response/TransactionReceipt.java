@@ -1,14 +1,21 @@
 package com.nebulasio.client.api.response;
 
+import com.google.gson.annotations.SerializedName;
+import lombok.Data;
+import lombok.ToString;
+
 import java.io.Serializable;
 
 /**
  * Create by liuyang89 on 2018/05/05
  **/
+@Data
+@ToString
 public class TransactionReceipt implements Serializable {
 
     private String hash;
 
+    @SerializedName("chainId")
     private Integer chainId;
 
     private String from;
@@ -25,160 +32,24 @@ public class TransactionReceipt implements Serializable {
 
     private String data;
 
+    @SerializedName("gas_price")
     private String gasPrice;
 
+    @SerializedName("gas_limit")
     private String gasLimit;
 
+    @SerializedName("contract_address")
     private String contractAddress;
 
     private int status;
 
+    @SerializedName("gas_used")
     private String gasUsed;
 
-    public Long getTimestamp() {
-        return timestamp;
-    }
+    @SerializedName("execute_error")
+    private String executeError;
 
-    public TransactionReceipt setTimestamp(Long timestamp) {
-        this.timestamp = timestamp;
-        return this;
-    }
+    @SerializedName("execute_result")
+    private String executeResult;
 
-    public String getHash() {
-        return hash;
-    }
-
-    public TransactionReceipt setHash(String hash) {
-        this.hash = hash;
-        return this;
-    }
-
-    public Integer getChainId() {
-        return chainId;
-    }
-
-    public TransactionReceipt setChainId(Integer chainId) {
-        this.chainId = chainId;
-        return this;
-    }
-
-    public String getFrom() {
-        return from;
-    }
-
-    public TransactionReceipt setFrom(String from) {
-        this.from = from;
-        return this;
-    }
-
-    public String getTo() {
-        return to;
-    }
-
-    public TransactionReceipt setTo(String to) {
-        this.to = to;
-        return this;
-    }
-
-    public String getValue() {
-        return value;
-    }
-
-    public TransactionReceipt setValue(String value) {
-        this.value = value;
-        return this;
-    }
-
-    public Long getNonce() {
-        return nonce;
-    }
-
-    public TransactionReceipt setNonce(Long nonce) {
-        this.nonce = nonce;
-        return this;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public TransactionReceipt setType(String type) {
-        this.type = type;
-        return this;
-    }
-
-    public String getData() {
-        return data;
-    }
-
-    public TransactionReceipt setData(String data) {
-        this.data = data;
-        return this;
-    }
-
-    public String getGasPrice() {
-        return gasPrice;
-    }
-
-    public TransactionReceipt setGasPrice(String gasPrice) {
-        this.gasPrice = gasPrice;
-        return this;
-    }
-
-    public String getGasLimit() {
-        return gasLimit;
-    }
-
-    public TransactionReceipt setGasLimit(String gasLimit) {
-        this.gasLimit = gasLimit;
-        return this;
-    }
-
-    public String getContractAddress() {
-        return contractAddress;
-    }
-
-    public TransactionReceipt setContractAddress(String contractAddress) {
-        this.contractAddress = contractAddress;
-        return this;
-    }
-
-    public int getStatus() {
-        return status;
-    }
-
-    public TransactionReceipt setStatus(int status) {
-        this.status = status;
-        return this;
-    }
-
-    public String getGasUsed() {
-        return gasUsed;
-    }
-
-    public TransactionReceipt setGasUsed(String gasUsed) {
-        this.gasUsed = gasUsed;
-        return this;
-    }
-
-    @Override
-    public String toString() {
-        final StringBuilder sb = new StringBuilder("TransactionReceipt{");
-        sb.append("hash='").append(hash).append('\'');
-        sb.append(", chainId=").append(chainId);
-        sb.append(", from='").append(from).append('\'');
-        sb.append(", to='").append(to).append('\'');
-        sb.append(", value=").append(value);
-        sb.append(", nonce=").append(nonce);
-        sb.append(", timestamp=").append(timestamp);
-        sb.append(", type='").append(type).append('\'');
-        sb.append(", data='").append(data).append('\'');
-        sb.append(", gasPrice=").append(gasPrice);
-        sb.append(", gasLimit=").append(gasLimit);
-        sb.append(", contractAddress='").append(contractAddress).append('\'');
-        sb.append(", status=").append(status);
-        sb.append(", gasUsed=").append(gasUsed);
-        sb.append('}');
-        return sb.toString();
-    }
 }

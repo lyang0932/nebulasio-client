@@ -34,13 +34,13 @@ public interface NebulasClient {
 
     Response<TransactionReceipt> getTransactionReceipt(GetTransactionReceiptRequest request);
 
-    Response<Event> subscribe(SubscribeRequest request);
-
     Response<GasPrice> getGasPrice();
 
     Response<EstimateGas> estimateGas(EstimateGasRequest request);
 
     Response<GetEventsByHashResult> getEventsByHash(GetEventByHashRequest request);
+
+    Response<Event> subscribe(SubscribeRequest request);
 
     Response<GetMinerResult> getDynasty(GetMinerRequest request);
 

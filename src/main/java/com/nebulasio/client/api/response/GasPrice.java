@@ -1,5 +1,7 @@
 package com.nebulasio.client.api.response;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 
 /**
@@ -7,6 +9,7 @@ import java.io.Serializable;
  **/
 public class GasPrice implements Serializable {
 
+    @SerializedName(value = "gas_price")
     private String gasPrice;
 
     public GasPrice() {

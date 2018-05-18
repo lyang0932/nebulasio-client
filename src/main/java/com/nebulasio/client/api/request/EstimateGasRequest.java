@@ -1,5 +1,7 @@
 package com.nebulasio.client.api.request;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 import java.util.Arrays;
 
@@ -16,8 +18,10 @@ public class EstimateGasRequest implements Serializable {
 
     private Long nonce;
 
+    @SerializedName("gas_price")
     private String gasPrice;
 
+    @SerializedName("gas_limit")
     private String gasLimit;
 
     private String contract;

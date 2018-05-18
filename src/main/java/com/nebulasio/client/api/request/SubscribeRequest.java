@@ -26,6 +26,10 @@ public class SubscribeRequest implements Serializable {
         this.topics = Lists.newArrayList(topics);
     }
 
+    public SubscribeRequest(List<String> topics) {
+        this.topics = topics;
+    }
+
     public List<String> getTopics() {
         return topics;
     }
