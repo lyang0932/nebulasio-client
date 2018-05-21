@@ -17,6 +17,14 @@ public class HttpNebulasClient implements NebulasClient {
 
     private HttpClient client;
 
+    static NebulasClient create(String host) {
+        return new HttpNebulasClient(host);
+    }
+
+    static NebulasClient create(String host , OkHttpClient okHttpClient) {
+        return new HttpNebulasClient(host , okHttpClient);
+    }
+
     public HttpNebulasClient(String host) {
         this.host = host;
         this.client = new OKHttpClient();

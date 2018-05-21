@@ -11,14 +11,6 @@ import okhttp3.OkHttpClient;
  **/
 public interface NebulasAdminClient {
 
-    static NebulasAdminClient create(String host) {
-        return new HttpNebulasAdminClient(host);
-    }
-
-    static NebulasAdminClient create(String host, OkHttpClient okHttpClient) {
-        return new HttpNebulasAdminClient(host, okHttpClient);
-    }
-
     Response<NodeInfo> nodeInfo();
 
     Response<Accounts> accounts();

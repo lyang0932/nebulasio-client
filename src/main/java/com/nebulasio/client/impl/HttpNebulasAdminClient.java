@@ -18,6 +18,14 @@ public class HttpNebulasAdminClient implements NebulasAdminClient {
 
     private HttpClient client;
 
+    static NebulasAdminClient create(String host) {
+        return new HttpNebulasAdminClient(host);
+    }
+
+    static NebulasAdminClient create(String host, OkHttpClient okHttpClient) {
+        return new HttpNebulasAdminClient(host, okHttpClient);
+    }
+
     public HttpNebulasAdminClient(String host) {
         this.host = host;
         this.client = new OKHttpClient();

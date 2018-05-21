@@ -10,14 +10,6 @@ import okhttp3.OkHttpClient;
  **/
 public interface NebulasClient {
 
-    static NebulasClient create(String host) {
-        return new HttpNebulasClient(host);
-    }
-
-    static NebulasClient create(String host , OkHttpClient okHttpClient) {
-        return new HttpNebulasClient(host , okHttpClient);
-    }
-
     Response<NebState> getNebState();
 
     Response<AccountState> getAccountState(GetAccountStateRequest request);
